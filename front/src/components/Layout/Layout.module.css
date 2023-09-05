@@ -1,0 +1,35 @@
+.mainLayout {
+  max-width: 1400px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: gray;
+}
+
+.mainLayout ul {
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.mainNavLink {
+  display: inline-block;
+  color: white;
+  border-left: 1px solid white;
+  padding: 5px 15px;
+  text-align: right;
+}
+
+header {
+  background: rgb(12, 108, 187);
+}
+
+footer {
+  background: rgb(12, 108, 187);
+  color: white;
+  text-align: center;
+}
