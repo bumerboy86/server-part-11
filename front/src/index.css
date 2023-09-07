@@ -3,11 +3,36 @@
   padding: 0;
 }
 
+:root {
+  --black: #333333;
+  --hover-black: #555555;
+  --white: #ffff;
+  --gray: #636363;
+}
+
+body {
+  color: var(--black);
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: none;
 }
+
 a:hover {
-  color: #535bf2;
+  color: var(--gray);
+}
+
+a:visited {
+  color: var(--hover-black);
+}
+
+button {
+  padding: 15px 35px;
+  background: var(--black);
+  color: var(--white);
+}
+
+button:not(:disabled):hover {
+  background: var(--hover-black);
 }

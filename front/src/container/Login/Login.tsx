@@ -19,7 +19,7 @@ const Login = () => {
   }, [isSuccess]);
   return (
     <Container>
-      <div className={styles.container}>
+      <div>
         {!user ? (
           <CreateUserForm />
         ) : (

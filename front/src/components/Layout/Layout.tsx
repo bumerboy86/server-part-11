@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import styles from "./Layout.module.css";
+import Container from "../Container/Container.tsx";
 
 const Layout = () => {
   return (
@@ -9,28 +10,30 @@ const Layout = () => {
           <ul>
             <li>
               <Link className={styles.mainNavLink} to={"/"}>
-                Home
+                Главная
               </Link>
             </li>
             <li>
               <Link className={styles.mainNavLink} to={"/cabinet"}>
-                Cabinet
+                Личный кабинет
               </Link>
             </li>
             <li>
               <Link className={styles.mainNavLink} to={"/login"}>
-                Login
+                Вход/Регистрация
               </Link>
             </li>
             <li>
               <Link className={styles.mainNavLink} to={"/about"}>
-                About
+                О Нас
               </Link>
             </li>
           </ul>
         </nav>
       </header>
-      <Outlet />
+      <Container>
+        <Outlet />
+      </Container>
       <footer>
         <p>2023 All right reserved</p>
       </footer>

@@ -17,16 +17,12 @@ const CreateUserForm = () => {
   const dispatch = useAppDispatch();
   const [login, { isSuccess: LoginSuccess, data: loginData }] =
     useLoginUserMutation();
-  const [reg, setReg] = useState<boolean>(true);
+  const [reg, setReg] = useState<boolean>(false);
 
   const [userData] = useState<IUserPre>({
     password: "",
     email: "",
   });
-
-  const changeRegHandler = () => {
-    setReg((prev) => !prev);
-  };
 
   useEffect(() => {
     isSuccess && toast.success(`Пользователь ${data?.email} добавлен`);
@@ -41,8 +37,10 @@ const CreateUserForm = () => {
 
   return (
     <FormContainer>
-      <button onClick={changeRegHandler}>Вход/Регист</button>
-      <h2>{reg ? "Регистрация" : "Вход"}</h2>
+      <article>
+        <button onClick={() => setReg(false)}>Вход</button>
+        <button onClick={() => setReg(true)}>Регист</button>
+      </article>
       <Formik
         initialValues={userData}
         validateOnBlur
@@ -69,7 +67,7 @@ const CreateUserForm = () => {
             />
             <ErrorMessage name='password' component='div' />
             <button disabled={!isValid} type='submit'>
-              Добавить
+              {reg ? "Зарегестрировать" : "Войти"}
             </button>
           </Form>
         )}

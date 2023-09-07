@@ -5,7 +5,6 @@
   flex-direction: column;
   box-sizing: border-box;
   margin: 0 auto;
-  background: gray;
 }
 
 .mainLayout ul {
@@ -18,18 +17,21 @@
 
 .mainNavLink {
   display: inline-block;
-  color: white;
-  border-left: 1px solid white;
   padding: 5px 15px;
   text-align: right;
+  color: var(--white);
+}
+
+.mainNavLink:visited {
+  color: var(--white);
 }
 
 header {
-  background: rgb(12, 108, 187);
+  padding: 45px 0;
+  background: var(--black);
 }
 
 footer {
-  background: rgb(12, 108, 187);
-  color: white;
+  color: var(--black);
   text-align: center;
 }
