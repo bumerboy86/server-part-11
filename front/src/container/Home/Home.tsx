@@ -1,5 +1,4 @@
 import styles from "./Home.module.css";
-import bci from "../../assets/bgc.jpg";
 import { useRef } from "react";
 import defaultImage from "../../../src/assets/lessonBg.jpeg";
 
@@ -15,15 +14,13 @@ export const Home = () => {
   return (
     <section className={styles.mainHome}>
       <article className={styles.imageBlock}>
-        <img className={styles.bciImage} src={bci} alt='bci' />
-        <div className={styles.imageFilter}></div>
-        <h1 className={styles.mainHomeTitle}>
-          ешь<span>()</span>; спи<span>()</span>; пишиКод<span>()</span>;
-          повтори<span>()</span>;
-        </h1>
-        <button className={styles.mainHomeButton} onClick={scrollToMainLessons}>
-          К урокам
-        </button>
+        <div className={styles.mainHomeFunknBlock}>
+          <h1 className={styles.mainHomeTitle}>
+            ешь<span>()</span>; спи<span>()</span>; пишиКод<span>()</span>;
+            повтори<span>()</span>;
+          </h1>
+          <button onClick={scrollToMainLessons}>К урокам</button>
+        </div>
       </article>
       <article className={styles.mainLessons} ref={mainLessonsRef}>
         <p>Уроки</p>
